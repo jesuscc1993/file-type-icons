@@ -1,0 +1,42 @@
+:root {
+  --icon-size: 128px;
+  --spacing: 24px;
+}
+
+body {
+  background: #202020;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin: var(--spacing) var(--spacing) 33vh;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1344px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-gap: var(--spacing);
+  grid-template-columns: repeat(auto-fill, var(--icon-size));
+  grid-template-rows: repeat(auto-fill, var(--icon-size));
+}
+
+.group {
+  margin: 36px 0;
+}
+
+.icon {
+  height: var(--icon-size);
+  image-rendering: pixelated;
+  width: var(--icon-size);
+}

@@ -1,0 +1,46 @@
+{
+  "": {
+    "title": "256px",
+    "files": [
+      "_file",
+      "_plain_text",
+      "APK",
+      "CSS",
+      "HTML",
+      "INI",
+      "JAR",
+      "JS",
+      "JSON",
+      "LESS",
+      "MP3",
+      "PDF",
+      "SASS",
+      "SRT",
+      "TS",
+      "TXT",
+      "XML"
+    ]
+  },
+  "16px": {
+    "title": "16px",
+    "files": [
+      "_file",
+      "_plain_text",
+      "APK",
+      "CSS",
+      "HTML",
+      "INI",
+      "JAR",
+      "JS",
+      "JSON",
+      "LESS",
+      "MP3",
+      "PDF",
+      "SASS",
+      "SRT",
+      "TS",
+      "TXT",
+      "XML"
+    ]
+  }
+}
