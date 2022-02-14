@@ -25,4 +25,4 @@ File type icons collection.
 
 # Download
 
-- [Download latest icons](https://www.deviantart.com/users/outgoing?https://github.com/jesuscc1993/file-type-icons/archive/refs/heads/gh-pages.zip)
+- [Download latest icons](https://github.com/jesuscc1993/file-type-icons/archive/refs/heads/gh-pages.zip)
