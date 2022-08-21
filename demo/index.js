@@ -1,3 +1,8 @@
+const fileGroups = [
+  { path: '../PNG', size: 256 },
+  { path: '../PNG/16px', size: 16 },
+];
+
 const fetchJson = (url) => {
   return fetch(url).then((response) => response.json());
 };
@@ -5,22 +10,20 @@ const fetchJson = (url) => {
 const initialize = () => {
   const output = jQuery('#output');
 
-  fetchJson('files.json').then((filesMap) => {
-    Object.keys(filesMap).forEach((groupKey) => {
-      const group = filesMap[groupKey];
+  fetchJson('files.json').then((files) => {
+    fileGroups.forEach((fileGroup) => {
+      const groupKey = `${fileGroup.size}px`;
 
       const groupElement = jQuery(`
         <div class="group">
-          <h2>${group.title}</h2>
+          <h2>${groupKey}</h2>
         </div>
       `);
       const filesGrid = jQuery(`<div class="grid"></div>`);
 
-      group.files.forEach((file) => {
+      files.forEach((file) => {
         filesGrid.append(
-          `<img class="icon" src="../PNG${
-            groupKey ? `/${groupKey}` : ``
-          }/${file}.png" title="${file}">`
+          `<img class="icon" src="${fileGroup.path}/${file}.png" title="${file}">`
         );
       });
 
