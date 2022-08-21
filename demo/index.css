@@ -1,5 +1,5 @@
 :root {
-  --icon-size: 128px;
+  --icon-size: 96px;
   --spacing: 24px;
 }
 
@@ -20,7 +20,7 @@ a:hover {
 
 .main {
   margin: 0 auto;
-  max-width: 1344px;
+  max-width: calc(var(--icon-size) * 8 + var(--spacing) * 7);
   text-align: center;
 }
 
@@ -37,6 +37,9 @@ a:hover {
 
 .icon {
   height: var(--icon-size);
-  image-rendering: pixelated;
   width: var(--icon-size);
+}
+
+.icon.16px {
+  image-rendering: pixelated;
 }

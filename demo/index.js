@@ -23,7 +23,7 @@ const initialize = () => {
 
       files.forEach((file) => {
         filesGrid.append(
-          `<img class="icon" src="${fileGroup.path}/${file}.png" title="${file}">`
+          `<img class="icon ${groupKey}" src="${fileGroup.path}/${file}.png" title="${file}">`
         );
       });
 
