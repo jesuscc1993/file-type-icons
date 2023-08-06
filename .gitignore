@@ -1,5 +1,7 @@
 *.psd
 *.tif
+_dummies/*
 _preview
 _src
+!_dummies/generateTestDummies.bat
 desktop.ini
