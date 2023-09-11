@@ -3,6 +3,7 @@ type nul > file.APK
 type nul > file.CSS
 type nul > file.CSV
 type nul > file.FLAC
+type nul > file.GITIGNORE
 type nul > file.HTML
 type nul > file.INI
 type nul > file.JAR

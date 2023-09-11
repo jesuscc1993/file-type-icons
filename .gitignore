@@ -1,3 +1,4 @@
+*.log
 *.psd
 *.tif
 _dummies/*
