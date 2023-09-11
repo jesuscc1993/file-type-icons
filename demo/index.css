@@ -40,6 +40,6 @@ a:hover {
   width: var(--icon-size);
 }
 
-.icon.16px {
+.icon.pixelated {
   image-rendering: pixelated;
 }

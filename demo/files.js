@@ -1,11 +1,13 @@
-[
+const files = [
   "_file",
   "_plain_text",
   "AHK",
   "APK",
+  "BAT",
   "CSS",
   "CSV",
   "FLAC",
+  "GIT",
   "HTML",
   "INI",
   "JAR",
@@ -21,4 +23,4 @@
   "TS",
   "TXT",
   "XML"
-]
+];

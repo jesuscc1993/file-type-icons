@@ -1,6 +1,6 @@
 const fileGroups = [
   { path: '../PNG', size: 256 },
-  { path: '../PNG/16px', size: 16 },
+  { path: '../PNG/16px', size: 16, classname: 'pixelated' },
 ];
 
 const fetchJson = (url) => {
@@ -10,26 +10,24 @@ const fetchJson = (url) => {
 const initialize = () => {
   const output = jQuery('#output');
 
-  fetchJson('files.json').then((files) => {
-    fileGroups.forEach((fileGroup) => {
-      const groupKey = `${fileGroup.size}px`;
+  fileGroups.forEach((fileGroup) => {
+    const groupKey = `${fileGroup.size}px`;
 
-      const groupElement = jQuery(`
-        <div class="group">
-          <h2>${groupKey}</h2>
-        </div>
-      `);
-      const filesGrid = jQuery(`<div class="grid"></div>`);
+    const groupElement = jQuery(`
+      <div class="group">
+        <h2>${groupKey}</h2>
+      </div>
+    `);
+    const filesGrid = jQuery(`<div class="grid"></div>`);
 
-      files.forEach((file) => {
-        filesGrid.append(
-          `<img class="icon ${groupKey}" src="${fileGroup.path}/${file}.png" title="${file}">`
-        );
-      });
-
-      groupElement.append(filesGrid);
-      output.append(groupElement);
+    files.forEach((file) => {
+      filesGrid.append(
+        `<img class="icon ${fileGroup.classname}" src="${fileGroup.path}/${file}.png" alt="${file}">`
+      );
     });
+
+    groupElement.append(filesGrid);
+    output.append(groupElement);
   });
 };
 
