@@ -1,6 +1,7 @@
 :root {
   --icon-size: 96px;
   --spacing: 24px;
+  --cols: 9;
 }
 
 body {
@@ -20,7 +21,7 @@ a:hover {
 
 .main {
   margin: 0 auto;
-  max-width: calc(var(--icon-size) * 8 + var(--spacing) * 7);
+  max-width: calc((var(--icon-size) + var(--spacing)) * var(--cols));
   text-align: center;
 }
 
@@ -29,6 +30,7 @@ a:hover {
   grid-gap: var(--spacing);
   grid-template-columns: repeat(auto-fill, var(--icon-size));
   grid-template-rows: repeat(auto-fill, var(--icon-size));
+  justify-content: center;
 }
 
 .group {
