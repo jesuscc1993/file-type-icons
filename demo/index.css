@@ -1,14 +1,24 @@
 :root {
-  --icon-size: 96px;
-  --spacing: 24px;
-  --cols: 9;
+  --gap: 32px;
+  --margin: 24px;
+
+  --c-frame: #000;
+  --c-window-bg: #202020;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: #202020;
+  background: #101010;
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  margin: var(--spacing) var(--spacing) 33vh;
+  margin: var(--margin) var(--margin) 33vh;
+}
+
+h1 {
+  margin: 0.33em;
 }
 
 a {
@@ -21,23 +31,52 @@ a:hover {
 
 .main {
   margin: 0 auto;
-  max-width: calc((var(--icon-size) + var(--spacing)) * var(--cols));
   text-align: center;
 }
 
-.grid {
-  display: grid;
-  grid-gap: var(--spacing);
-  grid-template-columns: repeat(auto-fill, var(--icon-size));
-  grid-template-rows: repeat(auto-fill, var(--icon-size));
-  justify-content: center;
+.windows {
+  display: flex;
+  flex-direction: column;
 }
 
 .group {
-  margin: 36px 0;
+  --icon-size: 128px;
+  --columns: 10;
+
+  background: var(--c-frame);
+  border: 4px solid var(--c-frame);
+  border-radius: 6px;
+  margin: var(--margin) auto;
+}
+
+.group .title {
+  background: var(--c-frame);
+  padding: 4px;
+}
+
+.group .content {
+  background: var(--c-window-bg);
+  border-radius: 2px;
+  padding: calc(var(--icon-size) / 8);
+}
+
+/*.grid {
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: repeat(auto-fill, var(--icon-size));
+  grid-template-rows: repeat(auto-fill, var(--icon-size));
+}*/
+
+.grid {
+  max-width: calc(var(--columns) * (var(--icon-size) + var(--gap)));
+}
+
+.grid a {
+  font-size: 0;
 }
 
 .icon {
+  margin: calc(var(--gap) / 2);
   height: var(--icon-size);
   width: var(--icon-size);
 }
