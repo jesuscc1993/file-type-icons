@@ -41,7 +41,7 @@ a:hover {
 
 .group {
   --icon-size: 128px;
-  --columns: 10;
+  --columns: 7;
 
   background: var(--c-frame);
   border: 4px solid var(--c-frame);
