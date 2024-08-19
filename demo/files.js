@@ -4,6 +4,7 @@ const files = [
   "AAC",
   "AHK",
   "APK",
+  "BAK",
   "BAT",
   "CFG",
   "CSS",
