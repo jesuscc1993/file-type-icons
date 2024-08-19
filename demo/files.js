@@ -1,6 +1,7 @@
 const files = [
   "_file",
   "_plain_text",
+  "_unknown",
   "AAC",
   "AHK",
   "APK",
