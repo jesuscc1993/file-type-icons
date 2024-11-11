@@ -30,5 +30,6 @@ const files = [
   "SRT",
   "TS",
   "TXT",
+  "WAV",
   "XML"
 ];
