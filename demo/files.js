@@ -24,6 +24,7 @@ const files = [
   "MP3",
   "OGG",
   "PDF",
+  "PS",
   "PY",
   "RB",
   "SASS",

@@ -13,6 +13,7 @@ type nul > file.LESS
 type nul > file.MD
 type nul > file.MP3
 type nul > file.OGG
+type nul > file.PS1
 type nul > file.PDF
 type nul > file.SCSS
 type nul > file.SRT
