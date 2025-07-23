@@ -27,6 +27,7 @@ const files = [
   "PS",
   "PY",
   "RB",
+  "REG",
   "SASS",
   "SRT",
   "TS",
