@@ -11,14 +11,16 @@ const initialize = () => {
   const output = jQuery('#output');
 
   fileGroups.forEach((fileGroup) => {
-    const groupElement = jQuery(`
-      <div class="group px${fileGroup.size}">
-        <div class="title">&#709; ${fileGroup.size} x ${fileGroup.size}</div>
-      </div>
-    `);
+    const groupElement = jQuery(
+      `<div class="group px${fileGroup.size}"></div>`
+    );
+    const groupTitle = jQuery(
+      `<div class="group__title">&gt; ${fileGroup.size} x ${fileGroup.size}</div>`
+    );
     const groupContent = jQuery(`<div class="content"></div>`);
-    const filesGrid = jQuery(`<div class="grid"></div>`);
+    groupTitle.on('click', () => groupContent.toggle());
 
+    const filesGrid = jQuery(`<div class="grid"></div>`);
     files.forEach((file) => {
       const path = `${fileGroup.path}/${file}.png`;
       filesGrid.append(`
@@ -30,6 +32,7 @@ const initialize = () => {
     });
 
     groupContent.append(filesGrid);
+    groupElement.append(groupTitle);
     groupElement.append(groupContent);
     output.append(groupElement);
   });
