@@ -13,7 +13,7 @@ const initialize = () => {
   fileGroups.forEach((fileGroup) => {
     const groupElement = jQuery(`
       <div class="group px${fileGroup.size}">
-        <div class="title">${fileGroup.size}px</div>
+        <div class="title">&#709; ${fileGroup.size} x ${fileGroup.size}</div>
       </div>
     `);
     const groupContent = jQuery(`<div class="content"></div>`);
@@ -24,7 +24,7 @@ const initialize = () => {
       filesGrid.append(`
         <a class="cell" href="${path}" target="_blank">
           <img class="icon ${fileGroup.classname}" src="${path}" title="${file}">
-		  <span>${file}</span>
+          <span>${file}</span>
         </a>
       `);
     });

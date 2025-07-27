@@ -1,16 +1,18 @@
 :root {
   --icon-size: 96px;
   --icon-gap: 8px;
-  
+
   --cell-width: calc(var(--icon-size) + var(--icon-gap) * 2);
   --cell-gap: 4px;
-  
-  --columns: 9;
-  
-  --margin: 24px;
 
-  --c-frame: #202020;
+  --columns: 10;
+
+  --margin: 24px;
+  --window-padding: 16px;
+
+  --c-frame: #2c2c2c;
   --c-window-bg: #191919;
+  --c-border: #3a3a3a;
 }
 
 * {
@@ -21,11 +23,13 @@ body {
   background: #101010;
   color: #fff;
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   margin: var(--margin) var(--margin) 33vh;
 }
 
 h1 {
   margin: 0.33em;
+  text-align: center;
 }
 
 a {
@@ -36,38 +40,60 @@ a:hover {
   text-decoration: underline;
 }
 
-.main {
-  margin: 0 auto;
+footer {
   text-align: center;
 }
 
-.windows {
-  display: flex;
-  flex-direction: column;
+.main {
+  margin: 0 auto;
 }
 
-.group {
-  background: var(--c-frame);
-  border: 2px solid var(--c-frame);
-  border-radius: 6px;
+.window {
+  background: var(--c-window-bg);
+  border-radius: 2px;
+  border-radius: 8px;
+  border: 1px solid var(--c-border);
   margin: var(--margin) auto;
+  width: max-content;
+}
+
+.window__title {
+  border-bottom: 2.5em solid var(--c-frame);
+  padding-top: 0.25em;
+}
+
+.window__tab {
+  background: var(--c-frame);
+  border-radius: 6px 6px 0 0;
+  margin-left: 0.5em;
+  padding: 0.5em 1em;
+  width: max-content;
+}
+
+.window__content {
+  background: var(--c-window-bg);
+  display: flex;
+  flex-direction: column;
+  padding: var(--window-padding);
+  border-top: 1px solid var(--c-border);
+}
+
+.group + .group {
+  margin-top: var(--margin);
 }
 
 .group .title {
-  background: var(--c-frame);
-  padding: 4px;
-}
-
-.group .content {
-  background: var(--c-window-bg);
-  border-radius: 2px;
-  padding: calc(var(--margin) / 2);
+  text-align: left;
+  font-size: 1.2em;
+  padding: var(--cell-gap) 0;
 }
 
 .grid {
   display: grid;
   gap: var(--cell-gap);
-  grid-auto-rows: calc(var(--icon-size) + var(--icon-gap) + var(--cell-gap) + 1em);
+  grid-auto-rows: calc(
+    var(--icon-size) + var(--icon-gap) + var(--cell-gap) + 1em
+  );
   grid-template-columns: repeat(auto-fit, var(--cell-width));
   max-width: calc(var(--columns) * (var(--cell-width) + var(--cell-gap)));
 }
@@ -77,7 +103,6 @@ a:hover {
   color: white;
   display: flex;
   flex-direction: column;
-  font-size: 14px;
   outline: 1px solid transparent;
 }
 .cell:hover {
@@ -97,4 +122,3 @@ a:hover {
 .icon.pixelated {
   image-rendering: pixelated;
 }
-
