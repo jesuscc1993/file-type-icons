@@ -22,8 +22,9 @@ const initialize = () => {
     files.forEach((file) => {
       const path = `${fileGroup.path}/${file}.png`;
       filesGrid.append(`
-        <a href="${path}" target="_blank">
+        <a class="cell" href="${path}" target="_blank">
           <img class="icon ${fileGroup.classname}" src="${path}" title="${file}">
+		  <span>${file}</span>
         </a>
       `);
     });
