@@ -11,14 +11,17 @@ const initialize = () => {
   const output = jQuery('#output');
 
   fileGroups.forEach((fileGroup) => {
-    const groupElement = jQuery(
-      `<div class="group px${fileGroup.size}"></div>`
-    );
-    const groupTitle = jQuery(
-      `<div class="group__title">&gt; ${fileGroup.size} x ${fileGroup.size}</div>`
-    );
-    const groupContent = jQuery(`<div class="content"></div>`);
-    groupTitle.on('click', () => groupContent.toggle());
+    const groupElement = jQuery(`
+      <div class="group open px${fileGroup.size}"></div>
+    `);
+    const groupTitle = jQuery(`
+      <div class="group__title">
+        <span class="chevron">&#709;</span>
+        ${fileGroup.size} x ${fileGroup.size}
+      </div>
+    `);
+    const groupContent = jQuery(`<div class="group__content"></div>`);
+    groupTitle.on('click', () => groupElement.toggleClass('open'));
 
     const filesGrid = jQuery(`<div class="grid"></div>`);
     files.forEach((file) => {

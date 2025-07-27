@@ -87,6 +87,15 @@ footer {
   margin-top: var(--margin);
 }
 
+.group:not(.open) .group__content {
+  display: none;
+}
+
+.group:not(.open) .chevron {
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+
 .group__title {
   cursor: pointer;
   font-size: 1.2em;
