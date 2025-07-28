@@ -19,6 +19,7 @@ const files = [
   "JS",
   "JSON",
   "LESS",
+  "LOG",
   "LUA",
   "MD",
   "MP3",
